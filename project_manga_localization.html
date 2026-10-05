@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI-Powered Manga Localization — Dzaka Prastiya</title>
+  <link rel="icon" href="assets/img/decor/logo.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="assets/css/style.css" rel="stylesheet">
+  <style>
+    body.detail-page {
+      background: #eef2f1
+    }
+
+    .detail-shell {
+      max-width: 1250px;
+      margin: 0 auto;
+      padding: 42px 20px 70px
+    }
+
+    .detail-top {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      align-items: center;
+      margin-bottom: 28px
+    }
+
+    .back-link {
+      display: inline-flex;
+      gap: 8px;
+      align-items: center;
+      padding: 10px 12px;
+      background: #fff;
+      border: 1px solid rgba(11, 15, 20, .12);
+      border-radius: 10px;
+      font: 800 .62rem/1 var(--grotesk)
+    }
+
+    .detail-code {
+      color: var(--blue);
+      font: 800 .62rem/1 var(--grotesk);
+      letter-spacing: .14em
+    }
+
+    .detail-hero {
+      display: grid;
+      grid-template-columns: 1.1fr .9fr;
+      gap: 25px;
+      align-items: start
+    }
+
+    .detail-title {
+      font: 400 clamp(3.4rem, 7vw, 7rem)/.82 var(--display);
+      margin: 5px 0 15px
+    }
+
+    .detail-title span {
+      color: var(--blue)
+    }
+
+    .detail-intro {
+      color: #626b74;
+      line-height: 1.9;
+      max-width: 780px
+    }
+
+    .detail-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 7px;
+      margin-top: 18px
+    }
+
+    .detail-tags span {
+      padding: 7px 9px;
+      border-radius: 8px;
+      background: #fff;
+      border: 1px solid rgba(11, 15, 20, .12);
+      font: 700 .58rem/1 var(--grotesk)
+    }
+
+    .detail-panel {
+      background: #0f151c;
+      color: #fff;
+      border-radius: 18px;
+      padding: 21px;
+      box-shadow: var(--shadow)
+    }
+
+    .detail-panel strong {
+      display: block;
+      color: var(--yellow);
+      font: 800 .58rem/1 var(--grotesk);
+      letter-spacing: .14em
+    }
+
+    .detail-panel h3 {
+      font: 700 1.3rem/1.1 var(--grotesk);
+      margin: 10px 0
+    }
+
+    .detail-panel p,
+    .detail-panel li {
+      color: rgba(255, 255, 255, .6);
+      font-size: .82rem;
+      line-height: 1.75
+    }
+
+    .detail-panel ul {
+      padding-left: 18px
+    }
+
+    .detail-slider {
+      margin-top: 30px
+    }
+
+    .portfolio-details-slider {
+      background: #10161c;
+      border-radius: 18px;
+      overflow: hidden
+    }
+
+    .portfolio-details-slider .swiper-slide {
+      height: 600px;
+      background: #10161c;
+      display: grid;
+      place-items: center
+    }
+
+    .portfolio-details-slider img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain
+    }
+
+    .swiper-pagination-bullet {
+      background: #fff;
+      opacity: .35
+    }
+
+    .swiper-pagination-bullet-active {
+      background: var(--yellow);
+      opacity: 1
+    }
+
+    @media(max-width:850px) {
+      .detail-hero {
+        grid-template-columns: 1fr
+      }
+
+      .portfolio-details-slider .swiper-slide {
+        height: 420px
+      }
+    }
+  </style>
+</head>
+
+<body class="detail-page">
+  <main class="detail-shell">
+    <div class="detail-top"><a class="back-link" href="index.html#portfolio"><i class="bi bi-arrow-left"></i> BACK TO
+        WORKSHOP</a>
+      <div class="detail-code">PROJECT / 02 / AI + LOCALIZATION</div>
+    </div>
+    <div class="detail-hero">
+      <div>
+        <div class="detail-code">AI-POWERED MANGA LOCALIZATION BROWSER EXTENSION</div>
+        <h1 class="detail-title">BEFORE.<br><span>AFTER.</span><br>LOCALIZED.</h1>
+        <p class="detail-intro">Chrome Extension untuk manga localization yang menggabungkan YOLO untuk mendeteksi
+          speech bubble dengan AI translation untuk menerjemahkan dialog secara otomatis ke bahasa Tujuan.</p>
+        <div class="detail-tags"><span>AI</span><span>BROWSER
+            EXTENSION</span><span>LOCALIZATION</span><span>MICRO-SAAS</span></div>
+      </div>
+      <aside class="detail-panel"><strong>SOURCE NOTE</strong>
+        <h3>Detail teknis tidak dibuat-buat.</h3>
+        <p>Chrome extension ini digunakan untuk membantu proses penerjemahan manga secara langsung pada halaman browser.
+          Sistem menggunakan YOLO untuk mendeteksi area speech bubble, sehingga lokasi teks pada panel manga dapat
+          dikenali terlebih dahulu sebelum diproses oleh pipeline translation.
+          Setelah bubble terdeteksi, area teks menjadi input untuk proses AI translation. Hasil terjemahan kemudian
+          digunakan untuk menggantikan atau menampilkan teks dalam bahasa target sambil mempertahankan struktur visual
+          halaman manga.</p>
+      </aside>
+    </div>
+    <div class="detail-slider">
+      <div class="swiper portfolio-details-slider">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><img src="assets/img/projects/manga/before.webp" alt="Manga sebelum diterjemahkan">
+          </div>
+          <div class="swiper-slide"><img src="assets/img/projects/manga/after.webp" alt="Manga setelah diterjemahkan">
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </div>
+  </main>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/typed.js/typed.umd.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>
