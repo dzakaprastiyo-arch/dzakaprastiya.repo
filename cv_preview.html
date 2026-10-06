@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Curriculum Vitae — Dzaka Prastiya</title>
+  <link rel="icon" href="assets/img/decor/logo.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700;800&display=swap"
+    rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #0b0f14;
+      --paper: #f8faf9;
+      --card-bg: #ffffff;
+      --border: rgba(11, 15, 20, 0.12);
+      --yellow: #ffd500;
+      --blue: #0055bf;
+      --green: #00a651;
+      --muted: #5a6470;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: #eef2f1;
+      color: var(--ink);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Top Sticky Control Bar */
+    .top-bar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(11, 15, 20, 0.94);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      padding: 12px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .top-bar-left {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .back-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: #fff;
+      text-decoration: none;
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 0.8rem;
+      font-weight: 700;
+      padding: 8px 14px;
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      transition: all 0.2s;
+    }
+
+    .back-btn:hover {
+      background: var(--yellow);
+      color: var(--ink);
+      border-color: var(--yellow);
+    }
+
+    .cv-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      color: var(--green);
+      font-size: 0.72rem;
+      font-weight: 700;
+      font-family: 'Space Grotesk', sans-serif;
+      letter-spacing: 0.08em;
+    }
+
+    .cv-badge .dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--green);
+      box-shadow: 0 0 8px rgba(0, 166, 81, 0.8);
+    }
+
+    .top-bar-actions {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .btn-action {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 9px 16px;
+      border-radius: 8px;
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 0.76rem;
+      font-weight: 800;
+      text-decoration: none;
+      cursor: pointer;
+      border: 1px solid transparent;
+      transition: all 0.2s;
+    }
+
+    .btn-download {
+      background: var(--yellow);
+      color: var(--ink);
+      border: 1px solid var(--yellow);
+      box-shadow: 0 4px 12px rgba(255, 213, 0, 0.25);
+    }
+
+    .btn-download:hover {
+      background: #ffe033;
+      transform: translateY(-1px);
+    }
+
+    .btn-print {
+      background: rgba(255, 255, 255, 0.1);
+      color: #fff;
+      border-color: rgba(255, 255, 255, 0.18);
+    }
+
+    .btn-print:hover {
+      background: rgba(255, 255, 255, 0.2);
+    }
+
+    /* CV Document Shell (A4 paper simulation) */
+    .document-shell {
+      max-width: 860px;
+      margin: 36px auto 60px;
+      background: var(--card-bg);
+      border-radius: 12px;
+      padding: 56px 64px;
+      box-shadow: 0 20px 60px rgba(11, 15, 20, 0.1);
+      border: 1px solid var(--border);
+    }
+
+    /* Header */
+    .cv-header {
+      text-align: center;
+      padding-bottom: 22px;
+      border-bottom: 2px solid var(--ink);
+      margin-bottom: 24px;
+    }
+
+    .cv-name {
+      font-size: 2.2rem;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      color: var(--ink);
+    }
+
+    .cv-role {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--muted);
+      margin: 4px 0 10px;
+      letter-spacing: 0.05em;
+    }
+
+    .cv-contact {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      flex-wrap: wrap;
+      font-size: 0.82rem;
+      color: var(--muted);
+    }
+
+    .cv-contact a {
+      color: var(--blue);
+      text-decoration: none;
+    }
+
+    .cv-contact a:hover {
+      text-decoration: underline;
+    }
+
+    /* Sections */
+    .cv-section {
+      margin-bottom: 24px;
+    }
+
+    .cv-section-title {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 0.9rem;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      color: var(--ink);
+      padding-bottom: 4px;
+      border-bottom: 1.5px solid var(--ink);
+      margin-bottom: 12px;
+      text-transform: uppercase;
+    }
+
+    .cv-paragraph {
+      font-size: 0.86rem;
+      color: #343b44;
+      line-height: 1.65;
+    }
+
+    /* Timeline Entries */
+    .cv-entry {
+      margin-bottom: 16px;
+    }
+
+    .cv-entry-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .cv-entry-title {
+      font-size: 0.92rem;
+      font-weight: 700;
+      color: var(--ink);
+    }
+
+    .cv-entry-date {
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--muted);
+    }
+
+    .cv-entry-sub {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.82rem;
+      color: var(--muted);
+      font-style: italic;
+      margin-bottom: 6px;
+    }
+
+    .cv-bullets {
+      padding-left: 18px;
+      font-size: 0.84rem;
+      color: #3d4550;
+      line-height: 1.55;
+    }
+
+    .cv-bullets li {
+      margin-bottom: 4px;
+    }
+
+    /* Grid layout for skills */
+    .cv-skills-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px 24px;
+    }
+
+    .cv-skill-item {
+      font-size: 0.84rem;
+    }
+
+    .cv-skill-item strong {
+      display: block;
+      color: var(--ink);
+      font-size: 0.8rem;
+      font-family: 'Space Grotesk', sans-serif;
+      letter-spacing: 0.04em;
+      margin-bottom: 2px;
+    }
+
+    /* Print Stylesheet */
+    @media print {
+      body {
+        background: #fff !important;
+      }
+
+      .top-bar {
+        display: none !important;
+      }
+
+      .document-shell {
+        box-shadow: none !important;
+        border: none !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        max-width: 100% !important;
+      }
+    }
+
+    @media (max-width: 700px) {
+      .document-shell {
+        padding: 28px 20px;
+        margin: 16px 12px;
+      }
+
+      .cv-skills-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Top Sticky Navigation & Action Bar -->
+  <header class="top-bar">
+    <div class="top-bar-left">
+      <a href="index.html" class="back-btn"><i class="bi bi-arrow-left"></i> Portfolio</a>
+      <div class="cv-badge"><span class="dot"></span> OFFICIAL RESUME · VERIFIED</div>
+    </div>
+    <div class="top-bar-actions">
+      <button type="button" class="btn-action btn-print" onclick="window.print()"><i class="bi bi-printer"></i> Print / Save PDF</button>
+      <a href="assets/docs/CV_Dzaka_Prastiya.pdf" download="CV_Dzaka_Prastiya.pdf" class="btn-action btn-download"><i class="bi bi-file-earmark-arrow-down"></i> Download PDF</a>
+    </div>
+  </header>
+
+  <!-- Document Body -->
+  <main class="document-shell">
+
+    <!-- Header -->
+    <header class="cv-header">
+      <h1 class="cv-name">Dzaka Prastiya</h1>
+      <p class="cv-role">IT Specialist | Infrastructure Engineer | AI Pipeline Integration</p>
+      <div class="cv-contact">
+        <span><i class="bi bi-envelope"></i> <a href="mailto:dzakaprasetyo123@gmail.com">dzakaprasetyo123@gmail.com</a></span>
+        <span><i class="bi bi-telephone"></i> +62 851-8315-1119</span>
+        <span><i class="bi bi-geo-alt"></i> Medan, North Sumatera</span>
+        <span><i class="bi bi-linkedin"></i> <a href="https://www.linkedin.com/in/dzakaprastiya/" target="_blank">linkedin.com/in/dzakaprastiya</a></span>
+      </div>
+    </header>
+
+    <!-- Profile -->
+    <section class="cv-section">
+      <h2 class="cv-section-title">PROFILE</h2>
+      <p class="cv-paragraph">
+        Dedicated IT Specialist with a proven track record in troubleshooting hardware, managing networks, and delivering reliable technical solutions. I bring over a year of hands-on experience diagnosing computers, laptops, and electronic devices, having successfully managed a technical repair service during my college years. Beyond traditional IT support, I possess strong software engineering and system administration capabilities, proficient in Linux operating systems and backend development. My technical toolkit includes Python scripting, web automation, reverse engineering, and deploying AI-integrated applications. I thrive at the intersection of hardware maintenance and software automation, ensuring network environments run smoothly while continuously building robust tools to improve system efficiency.
+      </p>
+    </section>
+
+    <!-- Experience -->
+    <section class="cv-section">
+      <h2 class="cv-section-title">EXPERIENCE</h2>
+
+      <article class="cv-entry">
+        <div class="cv-entry-head">
+          <div class="cv-entry-title">PT Pengusahaan Daerah Industri Pulau Batam (Persero)</div>
+          <div class="cv-entry-date">Nov 2025 – Apr 2026</div>
+        </div>
+        <div class="cv-entry-sub">
+          <span>IT Unit Hardware (Internship)</span>
+          <span>Batam, Indonesia</span>
+        </div>
+        <ul class="cv-bullets">
+          <li>Performed troubleshooting and maintenance of PCs, peripherals, and network-related hardware to ensure smooth daily IT operations.</li>
+          <li>Assisted in supporting internal users across departments, resolving technical issues related to hardware, system access, and connectivity.</li>
+          <li>Developed and integrated internal system features including an overtime request and approval workflow connected to access control systems using internal APIs.</li>
+          <li>Managed and updated IT asset documentation, including maintenance records, asset handover logs, and inventory tracking to ensure accurate asset management.</li>
+        </ul>
+      </article>
+
+      <article class="cv-entry">
+        <div class="cv-entry-head">
+          <div class="cv-entry-title">PT. Pacific Medan Industri</div>
+          <div class="cv-entry-date">Feb 2024 – Jun 2024</div>
+        </div>
+        <div class="cv-entry-sub">
+          <span>IT Support (Internship)</span>
+          <span>Medan, Indonesia</span>
+        </div>
+        <ul class="cv-bullets">
+          <li>Handled daily end-user technical issues related to desktops, laptops, printers, and office applications.</li>
+          <li>Installed, configured, and maintained hardware and software systems following company IT standards.</li>
+          <li>Provided remote and on-site technical support, minimizing downtime and ensuring business continuity.</li>
+          <li>Assisted in basic network troubleshooting including LAN connectivity and IP configuration.</li>
+          <li>Implemented network and device monitoring using Zabbix, enabling early detection of system and network issues.</li>
+        </ul>
+      </article>
+
+      <article class="cv-entry">
+        <div class="cv-entry-head">
+          <div class="cv-entry-title">Dinas Komunikasi Dan Informatika</div>
+          <div class="cv-entry-date">Dec 2023 – Feb 2024</div>
+        </div>
+        <div class="cv-entry-sub">
+          <span>Network Administrator (Internship)</span>
+          <span>Medan, Indonesia</span>
+        </div>
+        <ul class="cv-bullets">
+          <li>Assisted in designing, implementing, and maintaining network infrastructure across multiple departments.</li>
+          <li>Configured and maintained routers, switches, IP addressing, and firewall rules to ensure stable and secure connectivity.</li>
+          <li>Monitored network performance and generated technical reports for evaluation and optimization.</li>
+          <li>Supported troubleshooting of network issues and assisted senior engineers during maintenance activities.</li>
+        </ul>
+      </article>
+
+      <article class="cv-entry">
+        <div class="cv-entry-head">
+          <div class="cv-entry-title">Robobrick Lab</div>
+          <div class="cv-entry-date">Jul 2023 – Oct 2025</div>
+        </div>
+        <div class="cv-entry-sub">
+          <span>Robotic Teacher (Freelance)</span>
+          <span>Medan, Indonesia</span>
+        </div>
+        <ul class="cv-bullets">
+          <li>Guided students through hands-on robotics and coding projects, helping them develop critical thinking and creativity skills.</li>
+          <li>Designed and implemented curriculum for EV3, Arduino, and Scratch, fostering STEM skills among students.</li>
+        </ul>
+      </article>
+
+      <article class="cv-entry">
+        <div class="cv-entry-head">
+          <div class="cv-entry-title">Infinite Learning Indonesia</div>
+          <div class="cv-entry-date">Aug 2023 – Dec 2023</div>
+        </div>
+        <div class="cv-entry-sub">
+          <span>Hybrid Cloud & AI (Apprenticeship)</span>
+          <span>Batam, Indonesia</span>
+        </div>
+        <ul class="cv-bullets">
+          <li>Gained practical experience in system administration, focusing on Red Hat Enterprise Linux and hybrid cloud solutions.</li>
+          <li>Contributed to a Two-Factor Authentication Library System project, enhancing security for digital systems.</li>
+        </ul>
+      </article>
+
+      <article class="cv-entry">
+        <div class="cv-entry-head">
+          <div class="cv-entry-title">PT. Telekomunikasi Indonesia Tbk</div>
+          <div class="cv-entry-date">Jun 2019 – Sep 2019</div>
+        </div>
+        <div class="cv-entry-sub">
+          <span>IT Support (Internship)</span>
+          <span>Medan, Indonesia</span>
+        </div>
+        <ul class="cv-bullets">
+          <li>Provided technical support for hardware and software issues to internal users.</li>
+          <li>Assisted with system maintenance, updates, and upgrades to ensure optimal system performance.</li>
+        </ul>
+      </article>
+    </section>
+
+    <!-- Education -->
+    <section class="cv-section">
+      <h2 class="cv-section-title">EDUCATION</h2>
+      <article class="cv-entry">
+        <div class="cv-entry-head">
+          <div class="cv-entry-title">S1 Computer System — STMIK Triguna Dharma (GPA 3.85 / 4.00)</div>
+          <div class="cv-entry-date">2021 – 2025</div>
+        </div>
+        <div class="cv-entry-sub">
+          <span>Graduated as Second-Best Student in the Department</span>
+          <span>Medan, Indonesia</span>
+        </div>
+        <ul class="cv-bullets">
+          <li>Participant of Kampus Merdeka (MSIB) programs: Independent Study: Hybrid Cloud & AI · Internship: Junior IT Support at PT Pacific Medan Industri.</li>
+          <li>Actively involved in community service programs focused on technology, robotics, and basic electricity education.</li>
+        </ul>
+      </article>
+    </section>
+
+    <!-- Certifications -->
+    <section class="cv-section">
+      <h2 class="cv-section-title">CERTIFICATION</h2>
+      <ul class="cv-bullets">
+        <li><strong>Red Hat System Certification Administrator (RHCSA):</strong> Proficient in Red Hat-based operating systems, configuration, and security management.</li>
+        <li><strong>Linux System Administrator:</strong> Expertise in Linux systems troubleshooting, container management, and network configuration.</li>
+        <li><strong>IBM Cybersecurity Advanced Certification:</strong> Advanced knowledge of threat detection, incident response, and cybersecurity strategies.</li>
+        <li><strong>IBM AI Advanced Certification:</strong> Proficient in AI algorithms, machine learning models, and their applications in real-world scenarios.</li>
+        <li><strong>TOEFL iBT (Score 570):</strong> English proficiency for technical documentation, IT communication, and professional environments.</li>
+      </ul>
+    </section>
+
+    <!-- Projects -->
+    <section class="cv-section">
+      <h2 class="cv-section-title">KEY ENGINEERING PROJECTS</h2>
+      <article class="cv-entry">
+        <div class="cv-entry-head">
+          <div class="cv-entry-title">Automated LEGO 9686 Sorting Machine with Computer Vision</div>
+        </div>
+        <ul class="cv-bullets">
+          <li>Architected and built a fully automated component sorting machine using the LEGO 9686 kit, featuring a motorized conveyor belt and servo-based sorting mechanism.</li>
+          <li>Implemented the YOLO deep learning model for real-time object detection and classification of components.</li>
+          <li>Designed a distributed hardware architecture leveraging an Orange Pi 4 for computer vision processing and Arduino Nano/Uno microcontrollers for hardware control.</li>
+          <li>Integrated mechanical systems, edge computing, and AI-driven automation to achieve accurate real-time sorting and actuation.</li>
+        </ul>
+      </article>
+
+      <article class="cv-entry">
+        <div class="cv-entry-head">
+          <div class="cv-entry-title">AI-Powered Manga Localization Browser Extension (Micro-SaaS)</div>
+        </div>
+        <ul class="cv-bullets">
+          <li>Designed and built an in-browser Chrome extension pipeline detecting speech bubbles directly on manga canvas panels using YOLO vision models.</li>
+          <li>Integrated OCR text extraction and contextual LLM translation engines to maintain conversational flow and character tone.</li>
+          <li>Implemented in-place canvas inpainting and dynamic typographic typesetting preserving original page art and layout.</li>
+        </ul>
+      </article>
+    </section>
+
+    <!-- Skills -->
+    <section class="cv-section">
+      <h2 class="cv-section-title">SKILLS & COMPETENCIES</h2>
+      <div class="cv-skills-grid">
+        <div class="cv-skill-item">
+          <strong>NETWORKING</strong>
+          <span>TCP/IP, DNS, DHCP, VPN, Routing & Switching, MikroTik, Firewalls</span>
+        </div>
+        <div class="cv-skill-item">
+          <strong>SYSTEMS & OS</strong>
+          <span>Red Hat Enterprise Linux (RHCSA), Linux, Windows Server, Zabbix Monitoring</span>
+        </div>
+        <div class="cv-skill-item">
+          <strong>SOFTWARE & PROGRAMMING</strong>
+          <span>Python, Arduino IDE, Cisco Packet Tracer, Git, Web Automation, APIs</span>
+        </div>
+        <div class="cv-skill-item">
+          <strong>AI & ROBOTICS</strong>
+          <span>YOLO Object Detection, OpenCV, Machine Learning, Orange Pi, Servos, EV3</span>
+        </div>
+        <div class="cv-skill-item">
+          <strong>LANGUAGES</strong>
+          <span>Indonesian (Native), English (Professional Working Proficiency - TOEFL 570)</span>
+        </div>
+        <div class="cv-skill-item">
+          <strong>WORK STYLE</strong>
+          <span>Troubleshooting mindset, Analytical problem solving, Cross-team collaboration</span>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+</body>
+
+</html>

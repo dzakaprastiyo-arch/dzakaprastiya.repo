@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 
 <head>
   <meta charset="utf-8">
@@ -41,7 +41,15 @@
       background: #fff;
       border: 1px solid rgba(11, 15, 20, .12);
       border-radius: 10px;
-      font: 800 .62rem/1 var(--grotesk)
+      font: 800 .62rem/1 var(--grotesk);
+      transition: all .25s cubic-bezier(.2,.8,.2,1);
+    }
+
+    .back-link:hover {
+      background: var(--yellow);
+      border-color: var(--yellow);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(255,213,0,.2);
     }
 
     .detail-code {
@@ -84,7 +92,14 @@
       border-radius: 8px;
       background: #fff;
       border: 1px solid rgba(11, 15, 20, .12);
-      font: 700 .58rem/1 var(--grotesk)
+      font: 700 .58rem/1 var(--grotesk);
+      transition: all .2s;
+    }
+
+    .detail-tags span:hover {
+      background: var(--yellow);
+      border-color: var(--yellow);
+      transform: translateY(-1px);
     }
 
     .detail-panel {
@@ -151,6 +166,96 @@
       opacity: 1
     }
 
+    /* ===== Pipeline Visualization ===== */
+    .pipeline-section {
+      margin-top: 40px;
+    }
+
+    .pipeline-label {
+      color: var(--blue);
+      font: 800 .62rem/1 var(--grotesk);
+      letter-spacing: .14em;
+      margin-bottom: 20px;
+    }
+
+    .pipeline-flow {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 0;
+      position: relative;
+    }
+
+    .pipeline-step {
+      text-align: center;
+      padding: 20px 12px;
+      background: #fff;
+      border: 1px solid rgba(11, 15, 20, .08);
+      border-radius: 14px;
+      position: relative;
+      transition: all .35s cubic-bezier(.2,.8,.2,1);
+      opacity: 0;
+      transform: translateY(16px);
+    }
+
+    .pipeline-step.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .pipeline-step:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 30px rgba(11, 15, 20, .12);
+      border-color: var(--yellow);
+    }
+
+    .pipeline-step::after {
+      content: '→';
+      position: absolute;
+      right: -14px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--muted);
+      font: 700 1.1rem/1 var(--grotesk);
+      z-index: 2;
+    }
+
+    .pipeline-step:last-child::after {
+      display: none;
+    }
+
+    .pipeline-icon {
+      width: 44px;
+      height: 44px;
+      margin: 0 auto 10px;
+      display: grid;
+      place-items: center;
+      background: var(--yellow);
+      border: 2px solid var(--ink);
+      border-radius: 10px;
+      box-shadow: 0 4px 0 var(--ink);
+      font-size: 18px;
+      transition: transform .25s cubic-bezier(.2,.8,.2,1), box-shadow .25s;
+    }
+
+    .pipeline-step:hover .pipeline-icon {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 0 var(--ink);
+    }
+
+    .pipeline-step h4 {
+      font: 800 .6rem/1 var(--grotesk);
+      letter-spacing: .1em;
+      margin: 8px 0 4px;
+      color: var(--ink);
+    }
+
+    .pipeline-step p {
+      color: var(--muted);
+      font-size: .72rem;
+      line-height: 1.45;
+      margin: 0;
+    }
+
     @media(max-width:850px) {
       .detail-hero {
         grid-template-columns: 1fr
@@ -158,6 +263,20 @@
 
       .portfolio-details-slider .swiper-slide {
         height: 360px
+      }
+
+      .pipeline-flow {
+        grid-template-columns: 1fr;
+        gap: 10px;
+      }
+
+      .pipeline-step::after {
+        content: '↓';
+        right: auto;
+        bottom: -14px;
+        top: auto;
+        left: 50%;
+        transform: translateX(-50%);
       }
     }
   </style>
@@ -173,37 +292,63 @@
       <div>
         <div class="detail-code">AUTOMATED LEGO 9686 SORTING MACHINE</div>
         <h1 class="detail-title">SORT.<br><span>CLASSIFY.</span><br>ACT.</h1>
-        <p class="detail-intro">Mesin sortir komponen LEGO 9686 berbasis computer vision yang menggabungkan motorized
-          conveyor belt, servo-based sorting mechanism, edge computing, dan AI-driven detection.</p>
+        <p class="detail-intro">I designed and engineered an automated sorting machine for LEGO 9686 Technic components, combining overhead computer vision, edge computing, conveyor mechanics, and multi-channel servo routing into a unified physical-digital system.</p>
         <div class="detail-tags"><span>LEGO 9686</span><span>YOLO</span><span>COMPUTER VISION</span><span>ORANGE PI
             4</span><span>ARDUINO NANO / UNO</span><span>CONVEYOR</span></div>
       </div>
       <aside class="detail-panel"><strong>ARCHITECTURE</strong>
         <h3>Distributed Hardware + AI Pipeline</h3>
-        <p>Mesin sortir LEGO 9686 dirancang sebagai sistem terdistribusi yang memisahkan proses identifikasi komponen
-          dan kendali mekanik. Kamera digunakan untuk mengambil gambar komponen yang berada pada conveyor, kemudian
-          Orange Pi 4 menjalankan proses computer vision dan model YOLO untuk mengenali serta mengklasifikasikan bentuk
-          komponen secara real-time.
-          Setelah komponen berhasil dikenali, hasil klasifikasi digunakan sebagai dasar untuk menentukan proses sortir.
-          Informasi tersebut diteruskan ke bagian kontrol yang menggunakan Arduino Nano dan Arduino Uno untuk mengatur
-          perangkat mekanik.</p>
+        <p>The sorting machine deploys an overhead camera module to capture component frames in real time along an automated conveyor belt. An Orange Pi 4 single-board computer runs a fine-tuned YOLO model for rapid part detection and classification. Once a component class is identified, serial signals trigger Arduino microcontrollers to actuate precision servo gates, directing each part into its designated compartment.</p>
         <ul>
-          <li>Object detection & classification dengan YOLO.</li>
-          <li>Conveyor belt memindahkan komponen.</li>
-          <li>Servo menjalankan mekanisme sorting.</li>
-          <li>Mechanical system dan edge computing terintegrasi.</li>
+          <li>Real-time object detection and classification via fine-tuned YOLO.</li>
+          <li>Automated continuous conveyor mechanical feed.</li>
+          <li>Multi-channel servo routing to sorted bin bays.</li>
+          <li>Edge computing orchestration bridging vision models with physical actuators.</li>
         </ul>
       </aside>
     </div>
+
+    <!-- Pipeline Visualization -->
+    <div class="pipeline-section">
+      <div class="pipeline-label">SORTING PIPELINE</div>
+      <div class="pipeline-flow">
+        <div class="pipeline-step" data-delay="0">
+          <div class="pipeline-icon"><i class="bi bi-database"></i></div>
+          <h4>DATASET</h4>
+          <p>Structured image dataset annotated across distinct LEGO 9686 parts</p>
+        </div>
+        <div class="pipeline-step" data-delay="120">
+          <div class="pipeline-icon"><i class="bi bi-eye"></i></div>
+          <h4>VISION</h4>
+          <p>Overhead camera acquisition capturing parts moving on conveyor</p>
+        </div>
+        <div class="pipeline-step" data-delay="240">
+          <div class="pipeline-icon"><i class="bi bi-cpu"></i></div>
+          <h4>CLASSIFICATION</h4>
+          <p>Real-time YOLO model inference categorizing part geometries</p>
+        </div>
+        <div class="pipeline-step" data-delay="360">
+          <div class="pipeline-icon"><i class="bi bi-sliders"></i></div>
+          <h4>CONTROL</h4>
+          <p>Serial signal dispatch to Arduino motor and servo controllers</p>
+        </div>
+        <div class="pipeline-step" data-delay="480">
+          <div class="pipeline-icon"><i class="bi bi-box-arrow-down"></i></div>
+          <h4>SORTING</h4>
+          <p>High-torque servo gates directing components to designated bins</p>
+        </div>
+      </div>
+    </div>
+
     <div class="detail-slider">
       <div class="swiper portfolio-details-slider">
         <div class="swiper-wrapper">
           <div class="swiper-slide"><img src="assets/img/projects/lego-sorter/dataset.webp"
-              alt="Dataset split untuk LEGO sorter"></div>
+              alt="Dataset split and distribution for LEGO 9686 sorting machine"></div>
           <div class="swiper-slide"><img src="assets/img/projects/lego-sorter/yolo.webp"
-              alt="Hasil deteksi YOLO pada komponen LEGO"></div>
+              alt="Real-time YOLO object detection inference on LEGO components"></div>
           <div class="swiper-slide"><img src="assets/img/projects/lego-sorter/prototype.webp"
-              alt="Prototype mesin sortir LEGO 9686"></div>
+              alt="Prototype of the automated LEGO 9686 sorting machine"></div>
         </div>
         <div class="swiper-pagination"></div>
       </div>
@@ -219,6 +364,25 @@
   <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
   <script src="assets/vendor/php-email-form/validate.js"></script>
   <script src="assets/js/main.js"></script>
+
+  <script>
+    // Pipeline step reveal on scroll
+    document.addEventListener('DOMContentLoaded', () => {
+      const steps = document.querySelectorAll('.pipeline-step');
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const delay = parseInt(entry.target.dataset.delay) || 0;
+            setTimeout(() => {
+              entry.target.classList.add('is-visible');
+            }, delay);
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.2 });
+      steps.forEach(step => observer.observe(step));
+    });
+  </script>
 </body>
 
 </html>

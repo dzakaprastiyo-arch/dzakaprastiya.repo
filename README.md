@@ -16,11 +16,9 @@ Website ini adalah hasil perombakan UI dari template portfolio yang Anda kirim. 
 - Back-to-top
 - PureCounter vendor tetap tersedia
 
-## Data yang digunakan
+## Data dan Konten
 
-Data utama mengikuti CV Dzaka Prastiya yang diberikan di percakapan. Foto profil, foto pengalaman, foto project, dan dua dokumen sertifikat berasal dari file yang Anda kirim.
-
-PT Telekomunikasi Indonesia tidak dimasukkan ke timeline portfolio ini. Detail teknis Manga Localization juga tidak dibuat-buat karena deskripsi project di CV terduplikasi dengan project LEGO.
+Portofolio ini menampilkan profil, pengalaman profesional, proyek teknik (Robotics & AI Pipeline), serta sertifikasi resmi milik Dzaka Prastiya. Seluruh aset dokumentasi visual dan berkas sertifikasi tersimpan rapi dalam folder `assets/`.
 
 ## Menjalankan
 

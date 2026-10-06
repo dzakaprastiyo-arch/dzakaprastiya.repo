@@ -23,7 +23,7 @@ if ($name === '' || $subject === '' || $message === '' || !filter_var($email, FI
 
 $to = 'dzakaprasetyo123@gmail.com';
 $subject = '[Portfolio] ' . preg_replace('/[\r\n]+/', ' ', $subject);
-$body = "Nama: {$name}\nEmail: {$email}\n\n{$message}";
+$body = "Name: {$name}\nEmail: {$email}\n\n{$message}";
 $headers = "From: portfolio@localhost\r\n" .
            "Reply-To: {$email}\r\n" .
            "Content-Type: text/plain; charset=UTF-8\r\n";

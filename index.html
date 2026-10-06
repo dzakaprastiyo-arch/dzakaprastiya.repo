@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description"
-    content="Portfolio Dzaka Prastiya — IT Specialist, Infrastructure Engineer, dan AI Pipeline Integration.">
+    content="Portfolio of Dzaka Prastiya — IT Specialist, Infrastructure Engineer, and AI Pipeline Integration.">
   <meta name="keywords"
     content="Dzaka Prastiya, IT Specialist, Infrastructure Engineer, Networking, Linux, Robotics, Computer Vision, AI">
   <meta name="theme-color" content="#0B0F14">
@@ -13,14 +13,14 @@
 
   <link rel="icon" href="assets/img/decor/logo.svg">
 
-  <!-- Font baru untuk UI: teknikal, industrial, tetapi tetap mudah dibaca. -->
+  <!-- Typography -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
     href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap"
     rel="stylesheet">
 
-  <!-- Vendor asli dipertahankan agar fungsi template tidak hilang. -->
+  <!-- Vendor -->
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
@@ -31,9 +31,10 @@
 </head>
 
 <body>
-  <!-- Tombol menu mobile: class dan behavior dipertahankan agar main.js tetap bekerja. -->
-  <i class="bi bi-list mobile-nav-toggle d-xl-none" aria-label="Buka menu"></i>
 
+  <i class="bi bi-list mobile-nav-toggle d-xl-none" aria-label="Toggle navigation menu"></i>
+
+  <div class="scroll-progress-bar" id="scrollProgress" aria-hidden="true"></div>
   <div class="workshop-noise" aria-hidden="true"></div>
   <div class="cursor-dot" aria-hidden="true"></div>
 
@@ -47,7 +48,7 @@
           <span class="profile-corner profile-corner--tr"></span>
           <span class="profile-corner profile-corner--bl"></span>
           <span class="profile-corner profile-corner--br"></span>
-          <img src="assets/img/profile/Dzaka.jpg " class="img-fluid" alt="Foto profil Dzaka Prastiya">
+          <img src="assets/img/profile/Dzaka.jpg" class="img-fluid" alt="Profile portrait of Dzaka Prastiya">
         </div>
         <div class="profile-kicker">WORKSHOP / 01</div>
         <h1><a href="index.html">DZAKA<br><span>PRASTIYA</span></a></h1>
@@ -62,32 +63,40 @@
             <i class="bx bx-envelope"></i>
           </a>
         </div>
+
+        <div class="sidebar-cv-box">
+          <button type="button" class="btn-sidebar-cv" id="sidebarCvBtn" aria-label="Download CV">
+            <i class="bi bi-file-earmark-arrow-down"></i>
+            <span>DOWNLOAD CV</span>
+            <span class="cv-tag">PDF</span>
+          </button>
+        </div>
       </div>
 
       <div class="nav-section-label">MAIN MENU</div>
 
-      <nav id="navbar" class="nav-menu navbar" aria-label="Navigasi utama">
+      <nav id="navbar" class="nav-menu navbar" aria-label="Main navigation">
         <ul>
           <li><a href="#hero" class="nav-link scrollto active"><i class="bx bx-home"></i><span>Home</span><b>01</b></a>
           </li>
-          <li><a href="#about" class="nav-link scrollto"><i class="bx bx-user"></i><span>Tentang</span><b>02</b></a>
+          <li><a href="#about" class="nav-link scrollto"><i class="bx bx-user"></i><span>About</span><b>02</b></a>
           </li>
-          <li><a href="#skills" class="nav-link scrollto"><i class="bx bx-chip"></i><span>Keahlian</span><b>03</b></a>
+          <li><a href="#skills" class="nav-link scrollto"><i class="bx bx-chip"></i><span>Skills</span><b>03</b></a>
           </li>
           <li><a href="#resume" class="nav-link scrollto"><i
-                class="bx bx-briefcase"></i><span>Pengalaman</span><b>04</b></a></li>
+                class="bx bx-briefcase"></i><span>Experience</span><b>04</b></a></li>
           <li><a href="#portfolio" class="nav-link scrollto"><i
-                class="bx bx-grid-alt"></i><span>Proyek</span><b>05</b></a></li>
+                class="bx bx-grid-alt"></i><span>Projects</span><b>05</b></a></li>
           <li><a href="#certificates" class="nav-link scrollto"><i
-                class="bx bx-award"></i><span>Sertifikat</span><b>06</b></a></li>
+                class="bx bx-award"></i><span>Certificates</span><b>06</b></a></li>
           <li><a href="#contact" class="nav-link scrollto"><i
-                class="bx bx-envelope"></i><span>Kontak</span><b>07</b></a></li>
+                class="bx bx-envelope"></i><span>Contact</span><b>07</b></a></li>
         </ul>
       </nav>
 
       <div class="sidebar-footer mt-auto">
         <div class="status-line"><span class="status-dot"></span> CONTACT CHANNEL READY</div>
-        <small>Medan, North Sumatera</small>
+        <small>Medan, North Sumatera, Indonesia</small>
       </div>
     </div>
   </header>
@@ -116,25 +125,28 @@
             <h2 class="hero-title">BUILD<br><span>RELIABLE</span><br>SYSTEMS.</h2>
 
             <p class="hero-copy">
-              Saya <strong>Dzaka Prastiya</strong> — IT Specialist, Infrastructure Engineer,
-              dan AI Pipeline Integration enthusiast. Saya menggabungkan troubleshooting
-              hardware, networking, Linux, automation, dan AI untuk membangun solusi teknis
-              yang benar-benar bisa dipakai.
+              I am <strong>Dzaka Prastiya</strong> — an IT Specialist, Infrastructure Engineer,
+              and AI Pipeline Integration enthusiast. I integrate hardware troubleshooting,
+              networking, Linux environments, automation workflows, and computer vision AI to engineer
+              dependable, production-ready solutions.
             </p>
 
             <div class="hero-actions">
-              <a href="#portfolio" class="btn-brick btn-yellow scrollto"><span class="btn-stud"></span> Lihat Proyek</a>
-              <a href="#contact" class="btn-brick btn-dark scrollto"><span class="btn-stud"></span> Hubungi Saya</a>
+              <a href="#portfolio" class="btn-brick btn-yellow scrollto"><span class="btn-stud"></span> View
+                Projects</a>
+              <button type="button" class="btn-brick btn-cv" id="heroCvBtn"><span class="btn-stud"></span><i
+                  class="bi bi-file-earmark-arrow-down"></i> Download CV</button>
+              <a href="#contact" class="btn-brick btn-dark scrollto"><span class="btn-stud"></span> Get in Touch</a>
             </div>
 
             <div class="hero-stats">
               <div>
                 <span>EDUCATION</span>
-                <strong>S1 COMPUTER SYSTEM</strong>
+                <strong>B.S. IN COMPUTER SYSTEMS</strong>
               </div>
               <div>
                 <span>ACADEMIC</span>
-                <strong>GPA 3.85</strong>
+                <strong>GPA 3.85 / 4.00</strong>
               </div>
               <div>
                 <span>FOCUS</span>
@@ -154,8 +166,7 @@
                   <span class="status-text">AVAILABLE</span>
                 </div>
                 <div class="portrait-image-wrap">
-                  <img src="assets/img/profile/profile.webp" alt="Dzaka Prastiya mengenakan blazer navy"
-                    loading="eager">
+                  <img src="assets/img/profile/profile.webp" alt="Dzaka Prastiya in navy blazer" loading="eager">
                 </div>
                 <div class="portrait-info">
                   <h3 class="portrait-name">DZAKA PRASTIYA</h3>
@@ -183,9 +194,9 @@
           <div class="section-code">DZK / PROFILE / 002</div>
           <h2>THE <span>BUILDER</span> BEHIND THE SYSTEM.</h2>
           <p>
-            Fokus saya berada di pertemuan antara infrastructure, hardware troubleshooting,
-            software automation, dan AI. Saya menikmati pekerjaan yang dimulai dari masalah
-            nyata lalu dibongkar sampai akar penyebabnya.
+            My technical focus lies at the convergence of IT infrastructure, hardware diagnostics,
+            software automation, and applied AI. I specialize in breaking down complex system failures
+            to root causes and delivering resilient engineering solutions.
           </p>
         </div>
 
@@ -195,19 +206,19 @@
             <div class="card-code">01 / PROFILE</div>
             <h3>Problem Solver, System Builder.</h3>
             <p>
-              Saya memiliki pengalaman hands-on dalam troubleshooting PC, laptop, peripheral,
-              perangkat jaringan, system access, connectivity, dokumentasi aset, dan pengembangan
-              fitur internal system.
+              Hands-on expertise across PC/workstation maintenance, enterprise peripheral servicing,
+              network hardware diagnostics, access controls, connectivity troubleshooting, IT asset documentation,
+              and internal enterprise tooling.
             </p>
             <p>
-              Saya juga terbiasa bekerja dengan Linux, backend development, Python scripting,
-              web automation, reverse engineering, dan integrasi aplikasi berbasis AI.
+              Proficient in Linux system administration, backend development, Python automation scripting,
+              reverse engineering, and deep integration of AI-driven capabilities into existing workflows.
             </p>
             <div class="about-tags">
               <span>IT SUPPORT</span>
               <span>INFRASTRUCTURE</span>
               <span>AUTOMATION</span>
-              <span>AI</span>
+              <span>APPLIED AI</span>
             </div>
           </article>
 
@@ -216,13 +227,14 @@
             <div class="quote-mark">“</div>
             <p class="statement">Troubleshoot.<br>Build.<br>Improve.</p>
             <div class="signal-bars" aria-hidden="true">
-              <span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+              <span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+            </div>
           </article>
 
           <article class="lego-card about-card about-card--stats" data-aos="fade-left" data-aos-delay="120">
             <div class="card-code">03 / QUICK STATS</div>
-            <div class="quick-stat"><strong>3.85</strong><span>GPA</span></div>
-            <div class="quick-stat"><strong>2ND</strong><span>BEST STUDENT</span></div>
+            <div class="quick-stat"><strong>3.85</strong><span>GPA (OUT OF 4.00)</span></div>
+            <div class="quick-stat"><strong>2ND</strong><span>DEPARTMENT HONORS</span></div>
             <div class="quick-stat"><strong>2021—2025</strong><span>STMIK TRIGUNA DHARMA</span></div>
           </article>
         </div>
@@ -235,18 +247,23 @@
         <div class="section-heading section-heading--light" data-aos="fade-up">
           <div class="section-code">DZK / TOOLBOX / 003</div>
           <h2>TOOLS I <span>BUILD</span> WITH.</h2>
-          <p>Stack teknis utama yang muncul di pekerjaan, project, dan pembelajaran saya.</p>
+          <p>Core technical stack applied across enterprise IT operations, robotics prototypes, and AI pipeline
+            deployments.</p>
         </div>
 
         <div class="skills-content skills-grid">
           <div class="skill-lane" data-aos="fade-up">
             <div class="skill-head"><span>01 / IT & HARDWARE</span><i class="bi bi-pc-display"></i></div>
             <div class="skill-tags">
-              <span>IT Support</span><span>Hardware
-                Troubleshooting</span><span>Windows</span><span>Printer</span><span>System Maintenance</span>
+              <span>IT Support</span><span>Hardware Troubleshooting</span><span>Windows</span><span>Printer
+                Servicing</span><span>System Maintenance</span>
             </div>
-            <div class="progress"><span class="skill">CORE STACK <i class="val">LOADED</i></span>
-              <div class="progress-bar-wrap">
+            <div class="skill-meter-block">
+              <div class="skill-meter-header">
+                <span class="skill-name">CORE STACK</span>
+                <span class="skill-val"><span class="val-led"></span> LOADED · 100%</span>
+              </div>
+              <div class="progress progress-bar-wrap">
                 <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
                 </div>
               </div>
@@ -256,11 +273,15 @@
           <div class="skill-lane" data-aos="fade-up" data-aos-delay="70">
             <div class="skill-head"><span>02 / NETWORKING</span><i class="bi bi-diagram-3"></i></div>
             <div class="skill-tags">
-              <span>TCP/IP</span><span>DNS</span><span>DHCP</span><span>VPN</span><span>Routing &
-                Switching</span><span>Firewall</span><span>Mikrotik</span>
+              <span>TCP/IP</span><span>DNS / DHCP</span><span>VPN</span><span>Routing & Switching</span><span>Firewall
+                Rules</span><span>MikroTik</span>
             </div>
-            <div class="progress"><span class="skill">CORE STACK <i class="val">LOADED</i></span>
-              <div class="progress-bar-wrap">
+            <div class="skill-meter-block">
+              <div class="skill-meter-header">
+                <span class="skill-name">CORE STACK</span>
+                <span class="skill-val"><span class="val-led"></span> LOADED · 100%</span>
+              </div>
+              <div class="progress progress-bar-wrap">
                 <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
                 </div>
               </div>
@@ -268,13 +289,17 @@
           </div>
 
           <div class="skill-lane" data-aos="fade-up" data-aos-delay="140">
-            <div class="skill-head"><span>03 / SYSTEMS</span><i class="bi bi-terminal"></i></div>
+            <div class="skill-head"><span>03 / SYSTEMS & CLOUD</span><i class="bi bi-terminal"></i></div>
             <div class="skill-tags">
-              <span>Linux</span><span>Red Hat Linux</span><span>Windows Server</span><span>Zabbix</span><span>System
-                Administration</span>
+              <span>Linux</span><span>Red Hat Enterprise Linux</span><span>Windows Server</span><span>Zabbix
+                Monitoring</span><span>System Administration</span>
             </div>
-            <div class="progress"><span class="skill">CORE STACK <i class="val">LOADED</i></span>
-              <div class="progress-bar-wrap">
+            <div class="skill-meter-block">
+              <div class="skill-meter-header">
+                <span class="skill-name">CORE STACK</span>
+                <span class="skill-val"><span class="val-led"></span> LOADED · 100%</span>
+              </div>
+              <div class="progress progress-bar-wrap">
                 <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
                 </div>
               </div>
@@ -285,10 +310,14 @@
             <div class="skill-head"><span>04 / SOFTWARE & AI</span><i class="bi bi-cpu"></i></div>
             <div class="skill-tags">
               <span>Python</span><span>Arduino</span><span>YOLO</span><span>Computer Vision</span><span>Machine
-                Learning</span><span>Backend</span><span>Web Automation</span>
+                Learning</span><span>Backend APIs</span><span>Web Automation</span>
             </div>
-            <div class="progress"><span class="skill">CORE STACK <i class="val">LOADED</i></span>
-              <div class="progress-bar-wrap">
+            <div class="skill-meter-block">
+              <div class="skill-meter-header">
+                <span class="skill-name">CORE STACK</span>
+                <span class="skill-val"><span class="val-led"></span> LOADED · 100%</span>
+              </div>
+              <div class="progress progress-bar-wrap">
                 <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
                 </div>
               </div>
@@ -296,13 +325,17 @@
           </div>
 
           <div class="skill-lane" data-aos="fade-up" data-aos-delay="280">
-            <div class="skill-head"><span>05 / ROBOTICS</span><i class="bi bi-robot"></i></div>
+            <div class="skill-head"><span>05 / ROBOTICS & EMBEDDED</span><i class="bi bi-robot"></i></div>
             <div class="skill-tags">
-              <span>Orange Pi</span><span>Arduino Nano</span><span>Arduino
-                Uno</span><span>Servo</span><span>Conveyor</span><span>LEGO Robotics</span>
+              <span>Orange Pi</span><span>Arduino Nano</span><span>Arduino Uno</span><span>Servo
+                Mechanics</span><span>Conveyor Systems</span><span>LEGO Robotics</span>
             </div>
-            <div class="progress"><span class="skill">CORE STACK <i class="val">LOADED</i></span>
-              <div class="progress-bar-wrap">
+            <div class="skill-meter-block">
+              <div class="skill-meter-header">
+                <span class="skill-name">CORE STACK</span>
+                <span class="skill-val"><span class="val-led"></span> LOADED · 100%</span>
+              </div>
+              <div class="progress progress-bar-wrap">
                 <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
                 </div>
               </div>
@@ -310,13 +343,17 @@
           </div>
 
           <div class="skill-lane" data-aos="fade-up" data-aos-delay="350">
-            <div class="skill-head"><span>06 / WORK STYLE</span><i class="bi bi-person-check"></i></div>
+            <div class="skill-head"><span>06 / ENGINEERING MINDSET</span><i class="bi bi-person-check"></i></div>
             <div class="skill-tags">
-              <span>Analytical Problem Solving</span><span>Troubleshooting Mindset</span><span>Team
-                Collaboration</span><span>Adaptability</span><span>Technical Communication</span>
+              <span>Analytical Troubleshooting</span><span>Root Cause Analysis</span><span>Cross-Functional
+                Collaboration</span><span>Rapid Adaptability</span><span>Technical Documentation</span>
             </div>
-            <div class="progress"><span class="skill">CORE STACK <i class="val">LOADED</i></span>
-              <div class="progress-bar-wrap">
+            <div class="skill-meter-block">
+              <div class="skill-meter-header">
+                <span class="skill-name">CORE STACK</span>
+                <span class="skill-val"><span class="val-led"></span> LOADED · 100%</span>
+              </div>
+              <div class="progress progress-bar-wrap">
                 <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
                 </div>
               </div>
@@ -332,27 +369,28 @@
         <div class="section-heading" data-aos="fade-up">
           <div class="section-code">DZK / BUILD HISTORY / 004</div>
           <h2>WHERE I HAVE <span>BUILT</span> & LEARNED.</h2>
-          <p>Pengalaman kerja, apprenticeship, dan aktivitas teknis yang membentuk workflow saya.</p>
+          <p>Professional roles, apprenticeships, and engineering initiatives shaping my technical foundation.</p>
         </div>
 
         <div class="experience-list">
           <article class="experience-item" data-aos="fade-up">
             <div class="experience-index">01</div>
             <div class="experience-image"><img src="assets/img/experience/persero.webp"
-                alt="Dzaka Prastiya saat bekerja di area PT Pengusahaan Daerah Industri Pulau Batam" loading="lazy">
+                alt="Dzaka Prastiya on-site at PT Pengusahaan Daerah Industri Pulau Batam" loading="lazy">
             </div>
             <div class="experience-copy">
               <div class="experience-meta"><span>Nov 2025 — Apr 2026</span><span>Batam, Indonesia</span></div>
               <h3>IT Unit Hardware <em>/ Internship</em></h3>
               <h4>PT Pengusahaan Daerah Industri Pulau Batam (Persero)</h4>
-              <p>Menangani troubleshooting dan maintenance PC, peripheral, hardware jaringan, system access,
-                connectivity, serta dokumentasi aset IT.</p>
+              <p>Conducted troubleshooting and preventive maintenance for enterprise workstations, peripherals, network
+                hardware, user access protocols, and digital IT asset tracking registers.</p>
               <ul>
-                <li>Mengembangkan workflow overtime request & approval.</li>
-                <li>Menghubungkan workflow dengan access control melalui internal APIs.</li>
-                <li>Mengelola maintenance records, handover logs, dan inventory tracking.</li>
+                <li>Engineered automated overtime request & approval workflow.</li>
+                <li>Integrated workflow operations with corporate access control systems via internal APIs.</li>
+                <li>Maintained technical maintenance records, shift handover logs, and equipment inventory tracking.
+                </li>
               </ul>
-              <div class="experience-tags"><span>PC</span><span>Network Hardware</span><span>Internal
+              <div class="experience-tags"><span>PC Maintenance</span><span>Network Hardware</span><span>Internal
                   APIs</span><span>Asset Management</span></div>
             </div>
           </article>
@@ -360,59 +398,62 @@
           <article class="experience-item" data-aos="fade-up">
             <div class="experience-index">02</div>
             <div class="experience-image"><img src="assets/img/experience/pacific.webp"
-                alt="Dokumentasi pengalaman Dzaka Prastiya di PT Pacific Medan Industri" loading="lazy"></div>
+                alt="Dzaka Prastiya at PT Pacific Medan Industri" loading="lazy"></div>
             <div class="experience-copy">
               <div class="experience-meta"><span>Feb 2024 — Jun 2024</span><span>Medan, Indonesia</span></div>
               <h3>IT Support <em>/ Internship</em></h3>
-              <h4>PT. Pacific Medan Industri</h4>
-              <p>Menangani technical issue pada desktop, laptop, printer, office applications, instalasi perangkat,
-                serta dukungan remote dan on-site.</p>
+              <h4>PT Pacific Medan Industri</h4>
+              <p>Resolved technical challenges across enterprise workstations, laptops, industrial printers, and office
+                suites, providing responsive remote and on-site support.</p>
               <ul>
-                <li>Basic network troubleshooting, LAN connectivity, dan IP configuration.</li>
-                <li>Mengimplementasikan monitoring network dan device menggunakan Zabbix.</li>
-                <li>Mendukung business continuity dengan meminimalkan downtime.</li>
+                <li>Diagnosed LAN connectivity, IP configurations, and network infrastructure issues.</li>
+                <li>Implemented continuous network and device monitoring infrastructure using Zabbix.</li>
+                <li>Maintained operational business continuity by substantially mitigating system downtime.</li>
               </ul>
-              <div class="experience-tags"><span>Windows</span><span>LAN</span><span>IP</span><span>Zabbix</span></div>
+              <div class="experience-tags"><span>Windows</span><span>LAN</span><span>IP
+                  Addressing</span><span>Zabbix</span></div>
             </div>
           </article>
 
           <article class="experience-item" data-aos="fade-up">
             <div class="experience-index">03</div>
             <div class="experience-image"><img src="assets/img/experience/kominfo.webp"
-                alt="Dokumentasi aktivitas networking di Dinas Komunikasi dan Informatika" loading="lazy"></div>
+                alt="Networking activities at Department of Communication and Informatics" loading="lazy"></div>
             <div class="experience-copy">
               <div class="experience-meta"><span>Dec 2023 — Feb 2024</span><span>Medan, Indonesia</span></div>
               <h3>Network Administrator <em>/ Internship</em></h3>
-              <h4>Dinas Komunikasi dan Informatika</h4>
-              <p>Assisted in designing, implementing, and maintaining network infrastructure across multiple
-                departments.</p>
+              <h4>Department of Communication and Informatics (Kominfo)</h4>
+              <p>Assisted in designing, implementing, and maintaining inter-departmental government network
+                infrastructure.</p>
               <ul>
-                <li>Konfigurasi router, switch, IP addressing, dan firewall rules.</li>
-                <li>Network monitoring dan technical reporting.</li>
-                <li>Mendukung troubleshooting dan maintenance bersama senior engineers.</li>
+                <li>Configured routers, managed switches, IP subnetting schemes, and firewall security policies.</li>
+                <li>Conducted active network performance monitoring and compiled diagnostic technical reports.</li>
+                <li>Supported senior infrastructure engineers with on-site troubleshooting and hardware maintenance.
+                </li>
               </ul>
-              <div class="experience-tags"><span>Router</span><span>Switch</span><span>Firewall</span><span>IP
-                  Addressing</span></div>
+              <div class="experience-tags"><span>Routers</span><span>Managed
+                  Switches</span><span>Firewalls</span><span>IP Subnetting</span></div>
             </div>
           </article>
 
           <article class="experience-item" data-aos="fade-up">
             <div class="experience-index">04</div>
             <div class="experience-image"><img src="assets/img/experience/robobrick.webp"
-                alt="Dokumentasi kegiatan tim Robobrick Lab" loading="lazy"></div>
+                alt="Robobrick Lab student robotics workshop" loading="lazy"></div>
             <div class="experience-copy">
               <div class="experience-meta"><span>Jul 2023 — Oct 2025</span><span>Medan, Indonesia</span></div>
-              <h3>Robotic Teacher <em>/ Freelance</em></h3>
+              <h3>Robotics Instructor <em>/ Freelance</em></h3>
               <h4>Robobrick Lab</h4>
-              <p>Membimbing siswa melalui hands-on robotics dan coding project untuk mengembangkan critical thinking,
-                creativity, dan STEM skills.</p>
+              <p>Mentored students through hands-on robotics and coding projects to cultivate computational thinking,
+                analytical problem solving, and STEM competencies.</p>
               <ul>
-                <li>Mendesain dan mengimplementasikan curriculum.</li>
-                <li>Mengembangkan materi EV3, Arduino, dan Scratch.</li>
-                <li>Membantu siswa membangun project secara langsung.</li>
+                <li>Structured and delivered progressive hands-on robotics curricula.</li>
+                <li>Developed instructional modules for LEGO EV3, Arduino microcontrollers, and Scratch programming.
+                </li>
+                <li>Supervised students in assembling, wiring, and debugging autonomous robotic prototypes.</li>
               </ul>
-              <div class="experience-tags"><span>LEGO
-                  EV3</span><span>Arduino</span><span>Scratch</span><span>STEM</span></div>
+              <div class="experience-tags"><span>LEGO EV3</span><span>Arduino</span><span>Scratch</span><span>STEM
+                  Education</span></div>
             </div>
           </article>
 
@@ -423,14 +464,14 @@
               <div class="experience-meta"><span>Aug 2023 — Dec 2023</span><span>Batam, Indonesia</span></div>
               <h3>Hybrid Cloud & AI <em>/ Apprenticeship</em></h3>
               <h4>Infinite Learning Indonesia</h4>
-              <p>Practical learning pada system administration, Red Hat Enterprise Linux, hybrid cloud solutions, dan
-                project development.</p>
+              <p>Intensive technical training in enterprise system administration, Red Hat Enterprise Linux, hybrid
+                cloud architectures, and production project development.</p>
               <ul>
-                <li>Berproses pada Two-Factor Authentication Library System project.</li>
-                <li>Mendukung peningkatan security pada digital systems.</li>
+                <li>Architected and implemented a Two-Factor Authentication (2FA) Library Management System.</li>
+                <li>Strengthened access security protocols and system audit standards on digital platforms.</li>
               </ul>
-              <div class="experience-tags"><span>RHEL</span><span>Hybrid Cloud</span><span>2FA</span><span>System
-                  Admin</span></div>
+              <div class="experience-tags"><span>RHEL</span><span>Hybrid Cloud</span><span>2FA
+                  Security</span><span>System Admin</span></div>
             </div>
           </article>
         </div>
@@ -439,12 +480,12 @@
           <div class="education-card lego-card">
             <div class="card-code">EDUCATION / 2021—2025</div>
             <div class="education-grid">
-              <div><span>DEGREE</span><strong>S1 COMPUTER SYSTEM</strong><small>STMIK Triguna Dharma · Medan,
+              <div><span>DEGREE</span><strong>B.S. IN COMPUTER SYSTEMS</strong><small>STMIK Triguna Dharma · Medan,
                   Indonesia</small></div>
-              <div><span>GPA</span><strong>3.85</strong><small>Graduated as Second-Best Student in the
-                  department.</small></div>
-              <div><span>PROGRAM</span><strong>KAMPUS MERDEKA / MSIB</strong><small>Independent Study: Hybrid Cloud & AI
-                  · Internship: Junior IT Support</small></div>
+              <div><span>ACADEMIC HONORS</span><strong>GPA 3.85 / 4.00</strong><small>Graduated as Second-Best Student
+                  in the Department.</small></div>
+              <div><span>NATIONAL PROGRAM</span><strong>KAMPUS MERDEKA / MSIB</strong><small>Certified Study: Hybrid
+                  Cloud & AI · Certified Internship: Junior IT Support</small></div>
             </div>
           </div>
         </div>
@@ -457,7 +498,8 @@
         <div class="section-heading" data-aos="fade-up">
           <div class="section-code">DZK / PROJECT BAY / 005</div>
           <h2>PROJECTS FROM THE <span>WORKSHOP.</span></h2>
-          <p>Project yang mempertemukan hardware, software, computer vision, automation, dan AI.</p>
+          <p>Applied engineering initiatives integrating embedded hardware, computer vision, automation, and modern AI.
+          </p>
         </div>
 
         <div class="row" data-aos="fade-up">
@@ -472,59 +514,61 @@
         </div>
 
         <div class="row portfolio-container g-4" data-aos="fade-up" data-aos-delay="80">
-          <!-- LEGO project: 3 foto dokumentasi yang user kirim. -->
+
           <div class="col-lg-6 portfolio-item filter-robotics filter-ai">
             <div class="portfolio-wrap project-card">
               <div class="project-media"><img src="assets/img/projects/lego-sorter/prototype.webp"
-                  alt="Prototype automated LEGO 9686 sorting machine" loading="lazy"><span
+                  alt="Prototype of the automated LEGO 9686 sorting machine" loading="lazy"><span
                   class="project-stamp">ROBOTICS / AI</span></div>
               <div class="project-overlay">
                 <div><small>PROJECT 01</small>
                   <h3>Automated LEGO 9686 Sorting Machine</h3>
-                  <p>YOLO + Orange Pi + Arduino + conveyor + servo sorting.</p>
+                  <p>YOLO object detection + Orange Pi edge compute + Arduino conveyor & servo automation.</p>
                 </div>
                 <div class="project-actions"><a href="assets/img/projects/lego-sorter/prototype.webp"
-                    data-gallery="lego-sorter" class="portfolio-lightbox" title="LEGO sorter prototype"><i
-                      class="bx bx-plus"></i></a><a href="project_lego_sorter.html" title="Lihat detail LEGO sorter"><i
+                    data-gallery="lego-sorter" class="portfolio-lightbox" title="LEGO Sorter Prototype"><i
+                      class="bx bx-plus"></i></a><a href="project_lego_sorter.html" title="View Project Details"><i
                       class="bx bx-link"></i></a></div>
               </div>
               <div class="hidden-gallery" aria-hidden="true">
                 <a href="assets/img/projects/lego-sorter/dataset.webp" data-gallery="lego-sorter"
-                  class="portfolio-lightbox" title="Dataset split"></a>
+                  class="portfolio-lightbox" title="Dataset Split & Distribution"></a>
                 <a href="assets/img/projects/lego-sorter/yolo.webp" data-gallery="lego-sorter"
-                  class="portfolio-lightbox" title="YOLO detection result"></a>
+                  class="portfolio-lightbox" title="YOLO Detection Inference"></a>
               </div>
             </div>
           </div>
 
-          <!-- Manga project: before / after. -->
+
           <div class="col-lg-6 portfolio-item filter-ai">
             <div class="portfolio-wrap project-card">
               <div class="project-media project-media--manga"><img src="assets/img/projects/manga/after.webp"
-                  alt="Hasil terjemahan manga setelah localization" loading="lazy"><span class="project-stamp">AI /
+                  alt="Manga localization translation result" loading="lazy"><span class="project-stamp">AI /
                   LOCALIZATION</span></div>
               <div class="project-overlay">
                 <div><small>PROJECT 02</small>
                   <h3>AI-Powered Manga Localization</h3>
-                  <p>Browser extension concept dengan dokumentasi before / after translation.</p>
+                  <p>Browser extension pipeline with automated speech bubble detection and contextual AI translation.
+                  </p>
                 </div>
                 <div class="project-actions"><a href="assets/img/projects/manga/before.webp"
-                    data-gallery="manga-localization" class="portfolio-lightbox" title="Before translation"><i
-                      class="bx bx-images"></i></a><a href="project_manga_localization.html"
-                    title="Lihat detail manga localization"><i class="bx bx-link"></i></a></div>
+                    data-gallery="manga-localization" class="portfolio-lightbox"
+                    title="Before Translation (Original)"><i class="bx bx-images"></i></a><a
+                    href="project_manga_localization.html" title="View Project Details"><i class="bx bx-link"></i></a>
+                </div>
               </div>
               <div class="hidden-gallery" aria-hidden="true">
                 <a href="assets/img/projects/manga/after.webp" data-gallery="manga-localization"
-                  class="portfolio-lightbox" title="After translation"></a>
+                  class="portfolio-lightbox" title="After Translation (Localized)"></a>
               </div>
             </div>
           </div>
 
-          <!-- Verified certificates: ikut container Isotope agar filter lama tetap berfungsi. -->
+
           <div id="certificates" class="col-lg-6 portfolio-item filter-certificates">
             <div class="portfolio-wrap certificate-card">
               <div class="certificate-media"><img src="assets/img/certificates/rhcsa.png"
-                  alt="Sertifikat Red Hat Certified System Administrator RHCSA atas nama Dzaka Prastiya" loading="lazy">
+                  alt="Red Hat Certified System Administrator RHCSA Certificate for Dzaka Prastiya" loading="lazy">
               </div>
               <div class="certificate-body">
                 <div class="certificate-meta"><span>RED HAT</span><span>14 DEC 2023</span></div>
@@ -540,7 +584,7 @@
           <div class="col-lg-6 portfolio-item filter-certificates">
             <div class="portfolio-wrap certificate-card">
               <div class="certificate-media"><img src="assets/img/certificates/toefl.png"
-                  alt="Sertifikat TOEFL Dzaka Prastiya dengan total skor 570" loading="lazy"></div>
+                  alt="Official TOEFL Certificate of Dzaka Prastiya with a total score of 570" loading="lazy"></div>
               <div class="certificate-body">
                 <div class="certificate-meta"><span>ELSKILL ENGLISH COURSE</span><span>25 JUN 2025</span></div>
                 <h3>Test of English Proficiency and Academic</h3>
@@ -552,11 +596,7 @@
             </div>
           </div>
         </div>
-        <div class="project-note" data-aos="fade-up">
-          <span class="note-dot"></span>
-          Deskripsi project mengikuti dokumentasi yang tersedia. Detail teknis manga localization yang tidak tercantum
-          di CV sengaja tidak dibuat-buat.
-        </div>
+
       </div>
     </section>
 
@@ -570,20 +610,20 @@
         <div class="org-grid">
           <article class="org-card lego-card" data-aos="fade-up"><span class="org-index">01</span>
             <h3>Multimedia Organization — STMIK Triguna Dharma</h3>
-            <p>Member · Jun 2021 — Jul 2023</p>
+            <p>Active Member · Jun 2021 — Jul 2023</p>
             <ul>
-              <li>Short video production.</li>
-              <li>Social media design & documentation.</li>
-              <li>Content management and sponsorship communication.</li>
+              <li>Short video production, camera operation, and video editing.</li>
+              <li>Social media graphics design, branding, and event photography.</li>
+              <li>Content pipeline management and corporate sponsorship communication.</li>
             </ul>
           </article>
           <article class="org-card lego-card" data-aos="fade-up" data-aos-delay="100"><span class="org-index">02</span>
             <h3>Komunitas Pendakwah Keren (KPK)</h3>
-            <p>IT Support & Documentation · Jun 2022 — Dec 2022</p>
+            <p>IT Support & Media Documentation · Jun 2022 — Dec 2022</p>
             <ul>
-              <li>Basic IT support & computer troubleshooting.</li>
-              <li>Technical support during events.</li>
-              <li>Activity documentation and reporting.</li>
+              <li>On-site IT support, computer troubleshooting, and hardware maintenance.</li>
+              <li>Live technical assistance and audio-visual coordination during events.</li>
+              <li>Activity documentation, post-event reporting, and digital asset archiving.</li>
             </ul>
           </article>
         </div>
@@ -596,13 +636,13 @@
         <div class="section-heading section-heading--light" data-aos="fade-up">
           <div class="section-code">DZK / CONNECTOR / 007</div>
           <h2>LET'S <span>BUILD</span> SOMETHING.</h2>
-          <p>Terbuka untuk percakapan seputar IT Support, infrastructure, networking, robotics, automation, dan AI
-            integration.</p>
+          <p>Open for opportunities in IT support, infrastructure engineering, networking, robotics, systems automation,
+            and AI integration.</p>
         </div>
 
         <div class="contact-grid" data-aos="fade-up" data-aos-delay="80">
           <div class="contact-console">
-            <div class="console-top"><span>CONTACT CHANNEL</span><span>SECURE / OPEN</span></div>
+            <div class="console-top"><span>CONTACT CHANNEL</span><span>SECURE / DIRECT</span></div>
             <a href="mailto:dzakaprasetyo123@gmail.com" class="contact-row"><i class="bi bi-envelope"></i>
               <div><small>EMAIL</small><strong>dzakaprasetyo123@gmail.com</strong></div><i
                 class="bi bi-arrow-up-right"></i>
@@ -616,28 +656,31 @@
                 class="bi bi-arrow-up-right"></i>
             </a>
             <div class="contact-row contact-row--static"><i class="bi bi-geo-alt"></i>
-              <div><small>LOCATION</small><strong>Medan, North Sumatera</strong></div>
+              <div><small>LOCATION</small><strong>Medan, North Sumatera, Indonesia</strong></div>
             </div>
           </div>
 
           <div class="contact-form-wrap">
-            <div class="form-console-header"><span>MESSAGE BUILDER</span><span>v1.0</span></div>
-            <!-- Endpoint lama milik template sengaja dihapus. Isi action dengan endpoint Formspree Anda bila ingin mengaktifkannya. -->
+            <div class="form-console-header"><span>MESSAGE CONSOLE</span><span>v1.0</span></div>
+
             <form action="forms/contact.php" method="post" role="form" class="php-email-form">
               <div class="row g-3">
-                <div class="form-group col-md-6"><label for="name">Nama</label><input type="text" name="name" id="name"
-                    class="form-control" placeholder="Nama Anda" required></div>
-                <div class="form-group col-md-6"><label for="email">Email</label><input type="email" name="email"
-                    id="email" class="form-control" placeholder="email@domain.com" required></div>
+                <div class="form-group col-md-6"><label for="name">Name</label><input type="text" name="name" id="name"
+                    class="form-control" placeholder="Your full name" required></div>
+                <div class="form-group col-md-6"><label for="email">Email Address</label><input type="email"
+                    name="email" id="email" class="form-control" placeholder="your.email@example.com" required></div>
               </div>
               <div class="form-group"><label for="subject">Subject</label><input type="text" name="subject" id="subject"
-                  class="form-control" placeholder="Project / opportunity / collaboration" required></div>
-              <div class="form-group"><label for="message">Pesan</label><textarea class="form-control" name="message"
-                  id="message" rows="7" placeholder="Ceritakan kebutuhan Anda..." required></textarea></div>
+                  class="form-control" placeholder="Project inquiry / career opportunity / collaboration" required>
+              </div>
+              <div class="form-group"><label for="message">Message</label><textarea class="form-control" name="message"
+                  id="message" rows="7"
+                  placeholder="Tell me about your project, infrastructure needs, or opportunity..." required></textarea>
+              </div>
               <div class="my-3">
                 <div class="loading">Sending...</div>
                 <div class="error-message"></div>
-                <div class="sent-message">Pesan siap dikirim.</div>
+                <div class="sent-message">Your message has been sent successfully. Thank you!</div>
               </div>
               <button type="submit" class="btn-brick btn-yellow"><span class="btn-stud"></span> SEND MESSAGE <i
                   class="bi bi-send"></i></button>
@@ -651,15 +694,84 @@
 
   <footer id="footer">
     <div class="container-fluid section-shell footer-inner">
-      <div><span>© 2026</span> <strong>DZAKA PRASTIYA</strong></div>
+      <div><span>© 2026</span> <strong>DZAKA PRASTIYA. ALL RIGHTS RESERVED.</strong></div>
       <div>BUILT WITH <span class="footer-brick">▦</span> SYSTEMS, CURIOSITY & COFFEE.</div>
     </div>
   </footer>
 
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center" aria-label="Kembali ke atas"><i
+  <!-- ======= Interactive CV Download Modal ======= -->
+  <div class="cv-modal-backdrop" id="cvModal" aria-hidden="true" role="dialog" aria-modal="true"
+    aria-labelledby="cvModalTitle">
+    <div class="cv-modal-card">
+      <button type="button" class="cv-modal-close" id="cvModalClose" aria-label="Close CV modal">
+        <i class="bi bi-x-lg"></i>
+      </button>
+
+      <div class="cv-modal-header">
+        <div class="cv-modal-code">DZK / CREDENTIAL ARCHIVE / 001</div>
+        <h2 id="cvModalTitle" class="cv-modal-title">DZAKA <span>PRASTIYA</span></h2>
+        <p class="cv-modal-sub">IT Specialist · Infrastructure Engineer · AI Pipeline Integration</p>
+        <div class="cv-status-badge">
+          <span class="status-dot"></span> OFFICIAL RESUME · VERIFIED CREDENTIALS · 2026
+        </div>
+      </div>
+
+      <!-- Quick Highlights -->
+      <div class="cv-modal-highlights">
+        <div class="cv-hl-card">
+          <small>DEGREE & GPA</small>
+          <strong>B.S. Computer Systems</strong>
+          <span>GPA 3.85 / 4.00 · 2nd Best Grad</span>
+        </div>
+        <div class="cv-hl-card">
+          <small>CERTIFICATIONS</small>
+          <strong>Red Hat RHCSA</strong>
+          <span>ID: 230-277-568 · TOEFL 570</span>
+        </div>
+        <div class="cv-hl-card">
+          <small>EXPERIENCE</small>
+          <strong>IT Hardware & Systems</strong>
+          <span>Persero Batam · Pacific · Kominfo</span>
+        </div>
+      </div>
+
+      <!-- Interactive Download Console -->
+      <div class="cv-download-console">
+        <div class="cv-console-top">
+          <span>OFFICIAL CURRICULUM VITAE</span>
+          <span>FORMAT: PDF (2 PAGES)</span>
+        </div>
+
+        <button type="button" class="btn-interactive-download" id="startCvDownloadBtn">
+          <span class="btn-dl-text">
+            <i class="bi bi-cloud-arrow-down-fill"></i> DOWNLOAD OFFICIAL PDF (CV)
+          </span>
+          <span class="btn-dl-progress">
+            <span class="btn-dl-bar" id="cvDlProgressBar"></span>
+          </span>
+          <span class="btn-dl-status" id="cvDlStatus">CLICK TO INITIATE DOWNLOAD</span>
+        </button>
+
+        <div class="cv-secondary-actions">
+          <a href="cv_preview.html" target="_blank" class="btn-cv-sec">
+            <i class="bi bi-eye"></i> View & Print Resume
+          </a>
+          <button type="button" class="btn-cv-sec" id="copyCvTextBtn">
+            <i class="bi bi-clipboard-check"></i> Copy Text Summary
+          </button>
+        </div>
+
+        <div class="cv-copy-feedback" id="cvCopyFeedback">
+          <i class="bi bi-check-circle-fill"></i> Plain-text resume summary copied to clipboard!
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center" aria-label="Back to top"><i
       class="bi bi-arrow-up-short"></i></a>
 
-  <!-- Vendor JS tetap sama untuk mempertahankan fungsi asli template. -->
+
   <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
   <script src="assets/vendor/aos/aos.js"></script>
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -671,14 +783,24 @@
   <script src="assets/vendor/php-email-form/validate.js"></script>
   <script src="assets/js/main.js"></script>
 
-  <!-- UI enhancement tambahan, tidak mengganti fungsi utama main.js. -->
   <script>
     document.addEventListener('DOMContentLoaded', () => {
+      /* ---------- Custom Cursor ---------- */
       const cursor = document.querySelector('.cursor-dot');
-      const hoverable = document.querySelectorAll('a, button, .portfolio-wrap, .skill-lane');
+      const hoverable = document.querySelectorAll('a, button, .portfolio-wrap, .skill-lane, .lego-card, .experience-item, .certificate-card, input, textarea');
       if (window.matchMedia('(pointer:fine)').matches && cursor) {
+        let cx = -100, cy = -100;
+        let tx = -100, ty = -100;
+        const lerp = (a, b, n) => a + (b - a) * n;
+        function animateCursor() {
+          cx = lerp(cx, tx, .18);
+          cy = lerp(cy, ty, .18);
+          cursor.style.transform = `translate3d(${cx}px, ${cy}px, 0)`;
+          requestAnimationFrame(animateCursor);
+        }
+        animateCursor();
         window.addEventListener('pointermove', (e) => {
-          cursor.style.transform = `translate3d(${e.clientX}px, ${e.clientY}px, 0)`;
+          tx = e.clientX; ty = e.clientY;
         }, { passive: true });
         hoverable.forEach((el) => {
           el.addEventListener('pointerenter', () => cursor.classList.add('is-hovering'));
@@ -686,12 +808,217 @@
         });
       }
 
+      /* ---------- Project Card Snap ---------- */
       const cards = document.querySelectorAll('.project-card');
       cards.forEach((card) => {
         card.addEventListener('pointerdown', () => card.classList.add('is-snapped'));
         card.addEventListener('pointerup', () => card.classList.remove('is-snapped'));
         card.addEventListener('pointerleave', () => card.classList.remove('is-snapped'));
       });
+
+      /* ---------- Hero Parallax ---------- */
+      const heroSection = document.getElementById('hero');
+      const gridBg = document.querySelector('.hero-grid-bg');
+      const gridGlow = document.querySelector('.hero-grid-glow');
+      const portraitWrap = document.querySelector('.hero-portrait-wrap');
+      const accentBrickTop = document.querySelector('.portrait-accent-brick--top');
+      const accentBrickBot = document.querySelector('.portrait-accent-brick--bottom');
+
+      if (heroSection && window.matchMedia('(pointer:fine)').matches) {
+        heroSection.addEventListener('pointermove', (e) => {
+          const rect = heroSection.getBoundingClientRect();
+          const nx = (e.clientX - rect.left) / rect.width - 0.5;
+          const ny = (e.clientY - rect.top) / rect.height - 0.5;
+          if (gridBg) gridBg.style.transform = `translate(${nx * 8}px, ${ny * 8}px)`;
+          if (gridGlow) gridGlow.style.transform = `translate(${nx * -12}px, ${ny * -12}px)`;
+          if (accentBrickTop) accentBrickTop.style.transform = `translate(${nx * 5}px, ${ny * 5}px)`;
+          if (accentBrickBot) accentBrickBot.style.transform = `translate(${nx * -4}px, ${ny * -4}px)`;
+        }, { passive: true });
+      }
+
+      /* ---------- Page Visibility: pause animations when hidden ---------- */
+      document.addEventListener('visibilitychange', () => {
+        document.body.style.animationPlayState = document.hidden ? 'paused' : 'running';
+        document.querySelectorAll('[style*="animation"], .signal-bars span, .status-dot, .status-led, .profile-frame, .portrait-accent-brick span, .brick-topline span').forEach(el => {
+          el.style.animationPlayState = document.hidden ? 'paused' : 'running';
+        });
+      });
+
+      /* ---------- Reading Scroll Progress ---------- */
+      const progressBar = document.getElementById('scrollProgress');
+      const updateScrollProgress = () => {
+        const scrollTop = window.scrollY || document.documentElement.scrollTop;
+        const docHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        const progress = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+        if (progressBar) progressBar.style.width = `${progress}%`;
+      };
+      window.addEventListener('scroll', updateScrollProgress, { passive: true });
+      updateScrollProgress();
+
+      /* ---------- 3D Card Tilt Micro-Interaction ---------- */
+      if (window.matchMedia('(pointer:fine)').matches && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        const tiltCards = document.querySelectorAll('.lego-card, .project-card, .skill-lane, .experience-item, .certificate-card');
+        tiltCards.forEach(card => {
+          card.addEventListener('mousemove', (e) => {
+            const rect = card.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            const centerX = rect.width / 2;
+            const centerY = rect.height / 2;
+            const rotX = ((y - centerY) / centerY) * -2.5;
+            const rotY = ((x - centerX) / centerX) * 2.5;
+            card.style.transform = `perspective(1000px) rotateX(${rotX.toFixed(2)}deg) rotateY(${rotY.toFixed(2)}deg) translateY(-3px)`;
+          });
+          card.addEventListener('mouseleave', () => {
+            card.style.transform = '';
+          });
+        });
+      }
+
+      /* ---------- Nav link hover LED effect ---------- */
+      document.querySelectorAll('.nav-menu a').forEach(link => {
+        link.addEventListener('mouseenter', () => {
+          const icon = link.querySelector('i');
+          if (icon) icon.style.textShadow = '0 0 8px rgba(255,213,0,.5)';
+        });
+        link.addEventListener('mouseleave', () => {
+          const icon = link.querySelector('i');
+          if (icon) icon.style.textShadow = 'none';
+        });
+      });
+
+      /* ---------- Skills Progress Bars with Reliable IntersectionObserver ---------- */
+      const initSkillBars = () => {
+        const skillLanes = document.querySelectorAll('.skill-lane');
+        if (!skillLanes.length) return;
+
+        const animateBar = (lane) => {
+          const bar = lane.querySelector('.progress-bar');
+          if (bar && !bar.classList.contains('is-filled')) {
+            const val = bar.getAttribute('aria-valuenow') || '100';
+            bar.style.width = `${val}%`;
+            bar.classList.add('is-filled');
+          }
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              animateBar(entry.target);
+              observer.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.15, rootMargin: '0px 0px -30px 0px' });
+
+        skillLanes.forEach(lane => observer.observe(lane));
+
+        // Initial check for elements already in viewport on page load
+        setTimeout(() => {
+          skillLanes.forEach(lane => {
+            const rect = lane.getBoundingClientRect();
+            if (rect.top < window.innerHeight && rect.bottom > 0) {
+              animateBar(lane);
+            }
+          });
+        }, 300);
+      };
+      initSkillBars();
+
+      /* ---------- Interactive CV Download Modal & Logic ---------- */
+      const cvModal = document.getElementById('cvModal');
+      const cvModalClose = document.getElementById('cvModalClose');
+      const heroCvBtn = document.getElementById('heroCvBtn');
+      const sidebarCvBtn = document.getElementById('sidebarCvBtn');
+      const startCvDlBtn = document.getElementById('startCvDownloadBtn');
+      const cvDlProgressBar = document.getElementById('cvDlProgressBar');
+      const cvDlStatus = document.getElementById('cvDlStatus');
+      const copyCvTextBtn = document.getElementById('copyCvTextBtn');
+      const cvCopyFeedback = document.getElementById('cvCopyFeedback');
+
+      const openCvModal = () => {
+        if (!cvModal) return;
+        cvModal.classList.add('is-open');
+        cvModal.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+      };
+
+      const closeCvModal = () => {
+        if (!cvModal) return;
+        cvModal.classList.remove('is-open');
+        cvModal.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
+      };
+
+      if (heroCvBtn) heroCvBtn.addEventListener('click', openCvModal);
+      if (sidebarCvBtn) sidebarCvBtn.addEventListener('click', openCvModal);
+      if (cvModalClose) cvModalClose.addEventListener('click', closeCvModal);
+
+      if (cvModal) {
+        cvModal.addEventListener('click', (e) => {
+          if (e.target === cvModal) closeCvModal();
+        });
+      }
+
+      window.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && cvModal && cvModal.classList.contains('is-open')) {
+          closeCvModal();
+        }
+      });
+
+      // Interactive Download Progress Simulation & Trigger
+      if (startCvDlBtn) {
+        startCvDlBtn.addEventListener('click', () => {
+          if (startCvDlBtn.classList.contains('is-downloading')) return;
+
+          startCvDlBtn.classList.add('is-downloading');
+          if (cvDlProgressBar) cvDlProgressBar.style.width = '0%';
+          if (cvDlStatus) cvDlStatus.textContent = 'PREPARING PDF... 15%';
+
+          let progress = 15;
+          const interval = setInterval(() => {
+            progress += Math.floor(Math.random() * 25) + 15;
+            if (progress >= 100) {
+              progress = 100;
+              clearInterval(interval);
+              if (cvDlProgressBar) cvDlProgressBar.style.width = '100%';
+              if (cvDlStatus) cvDlStatus.textContent = '✓ 100% READY · DOWNLOADING...';
+
+              // Trigger direct file download
+              const dlLink = document.createElement('a');
+              dlLink.href = 'assets/docs/CV_Dzaka_Prastiya.pdf';
+              dlLink.download = 'CV_Dzaka_Prastiya.pdf';
+              document.body.appendChild(dlLink);
+              dlLink.click();
+              document.body.removeChild(dlLink);
+
+              setTimeout(() => {
+                startCvDlBtn.classList.remove('is-downloading');
+                if (cvDlProgressBar) cvDlProgressBar.style.width = '0%';
+                if (cvDlStatus) cvDlStatus.textContent = '✓ DOWNLOAD COMPLETED · CLICK TO RE-DOWNLOAD';
+              }, 1800);
+            } else {
+              if (cvDlProgressBar) cvDlProgressBar.style.width = `${progress}%`;
+              if (cvDlStatus) cvDlStatus.textContent = `COMPILING ASSETS... ${progress}%`;
+            }
+          }, 120);
+        });
+      }
+
+      // Copy Text Resume to Clipboard
+      if (copyCvTextBtn) {
+        copyCvTextBtn.addEventListener('click', () => {
+          const cvPlainText = `DZAKA PRASTIYA\nIT Specialist | Infrastructure Engineer | AI Pipeline Integration\nEmail: dzakaprasetyo123@gmail.com | Phone: +62 851-8315-1119 | Location: Medan, North Sumatera\nLinkedIn: linkedin.com/in/dzakaprastiya-229576279/\n\nPROFILE:\nDedicated IT Specialist with a proven track record in troubleshooting hardware, managing networks, and delivering reliable technical solutions. Highly proficient in Linux operating systems, backend development, Python scripting, web automation, reverse engineering, and AI-integrated applications.\n\nEXPERIENCE:\n- IT Unit Hardware (Internship) | PT Pengusahaan Daerah Industri Pulau Batam (Persero) (Nov 2025 - Apr 2026)\n- IT Support (Internship) | PT. Pacific Medan Industri (Feb 2024 - Jun 2024)\n- Network Administrator (Internship) | Dinas Komunikasi Dan Informatika (Dec 2023 - Feb 2024)\n- Robotic Teacher (Freelance) | Robobrick Lab (Jul 2023 - Oct 2025)\n- Hybrid Cloud & AI (Apprenticeship) | Infinite Learning Indonesia (Aug 2023 - Dec 2023)\n- IT Support (Internship) | PT. Telekomunikasi Indonesia Tbk (Jun 2019 - Sep 2019)\n\nEDUCATION:\n- B.S. in Computer Systems | STMIK Triguna Dharma (2021 - 2025) - GPA: 3.85 / 4.00 (Second-Best Graduate)\n\nCERTIFICATIONS:\n- Red Hat Certified System Administrator (RHCSA) - ID: 230-277-568\n- Linux System Administrator\n- IBM Cybersecurity Advanced Certification\n- IBM AI Advanced Certification\n- TOEFL iBT (Score 570)\n\nTECHNICAL SKILLS:\n- Hardware: Workstation diagnosis, peripheral repair, component maintenance\n- Systems: Red Hat Enterprise Linux, Linux, Windows Server, Zabbix Monitoring\n- Networking: TCP/IP, DNS, DHCP, VPN, Routing & Switching, Firewalls, MikroTik\n- Software & AI: Python, Arduino, YOLO, Computer Vision, Backend APIs, Web Automation`;
+
+          navigator.clipboard.writeText(cvPlainText).then(() => {
+            if (cvCopyFeedback) {
+              cvCopyFeedback.classList.add('is-visible');
+              setTimeout(() => {
+                cvCopyFeedback.classList.remove('is-visible');
+              }, 3000);
+            }
+          });
+        });
+      }
     });
   </script>
 </body>

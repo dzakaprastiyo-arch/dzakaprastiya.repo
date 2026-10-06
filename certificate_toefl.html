@@ -1,2 +1,271 @@
 <!DOCTYPE html>
-<html lang="id"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>TOEFL — Dzaka Prastiya</title><link rel="icon" href="assets/img/decor/logo.svg"><link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;600;700;800&family=Space+Grotesk:wght@500;700;800&display=swap" rel="stylesheet"><link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet"><link href="assets/css/style.css" rel="stylesheet"><style>body{background:#eef2f1}.cert-detail{max-width:1100px;margin:auto;padding:40px 20px 70px}.top{display:flex;justify-content:space-between;align-items:center;gap:15px;margin-bottom:28px}.back{font:800 .62rem/1 var(--grotesk);padding:10px 12px;background:#fff;border-radius:10px;border:1px solid var(--line)}.code{font:800 .62rem/1 var(--grotesk);letter-spacing:.14em;color:var(--blue)}.cert-detail h1{font:400 clamp(3.2rem,7vw,6rem)/.84 var(--display);margin:5px 0}.cert-detail h1 span{color:var(--blue)}.cert-meta{display:flex;flex-wrap:wrap;gap:8px;margin:15px 0 24px}.cert-meta span{padding:8px 10px;background:var(--ink);color:#fff;border-radius:8px;font:700 .6rem/1 var(--grotesk)}.cert-view{background:#111820;border-radius:18px;padding:15px;box-shadow:var(--shadow)}.cert-view img{width:100%;max-height:760px;object-fit:contain;background:#fff}.cert-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}.cert-actions a{padding:12px 15px;border-radius:10px;border:2px solid var(--ink);background:var(--yellow);box-shadow:0 5px 0 var(--ink);font:800 .65rem/1 var(--grotesk)}</style></head><body><main class="cert-detail"><div class="top"><a class="back" href="index.html#certificates"><i class="bi bi-arrow-left"></i> BACK TO CERTIFICATES</a><div class="code">CREDENTIAL / 02</div></div><div class="code">ELSKILL ENGLISH COURSE</div><h1>TOEFL <span>570.</span></h1><div class="cert-meta"><span>25 JUN 2025</span><span>LISTENING 51</span><span>STRUCTURE 53</span><span>READING 67</span><span>VALID UNTIL 25 JUN 2027</span></div><div class="cert-view"><img src="assets/img/certificates/toefl.png" alt="Sertifikat TOEFL Dzaka Prastiya dengan total skor 570"></div><div class="cert-actions"><a href="assets/img/certificates/TOEFL-Dzaka.pdf" target="_blank">OPEN PDF <i class="bi bi-file-earmark-pdf"></i></a></div></main></body></html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Test of English Proficiency (TOEFL) — Dzaka Prastiya</title>
+  <link rel="icon" href="assets/img/decor/logo.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/css/style.css" rel="stylesheet">
+  <style>
+    body.cert-page {
+      background: #eef2f1;
+    }
+
+    .cert-shell {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 42px 20px 80px;
+    }
+
+    .cert-top {
+      display: flex;
+      justify-content: space-between;
+      gap: 15px;
+      align-items: center;
+      margin-bottom: 28px;
+    }
+
+    .back-link {
+      display: inline-flex;
+      gap: 8px;
+      align-items: center;
+      padding: 10px 14px;
+      background: #fff;
+      border: 1px solid rgba(11, 15, 20, .12);
+      border-radius: 10px;
+      font: 800 .62rem/1 var(--grotesk);
+      transition: all .25s cubic-bezier(.2,.8,.2,1);
+    }
+
+    .back-link:hover {
+      background: var(--yellow);
+      border-color: var(--yellow);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(255,213,0,.22);
+    }
+
+    .cert-code {
+      color: var(--blue);
+      font: 800 .62rem/1 var(--grotesk);
+      letter-spacing: .14em;
+    }
+
+    .cert-header {
+      margin-bottom: 24px;
+    }
+
+    .cert-status-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 12px;
+      border-radius: 20px;
+      background: rgba(0, 85, 191, .1);
+      border: 1px solid rgba(0, 85, 191, .25);
+      color: var(--blue);
+      font: 800 .58rem/1 var(--grotesk);
+      letter-spacing: .12em;
+      margin-bottom: 12px;
+    }
+
+    .status-dot-active {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--blue);
+      box-shadow: 0 0 10px rgba(0, 85, 191, .8);
+      animation: status-breathe 2.4s ease-in-out infinite;
+    }
+
+    .cert-title {
+      font: 400 clamp(3.2rem, 7vw, 6.2rem)/.84 var(--display);
+      margin: 6px 0 16px;
+      letter-spacing: .02em;
+    }
+
+    .cert-title span {
+      color: var(--blue);
+    }
+
+    .cert-meta-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 12px;
+      margin-bottom: 28px;
+    }
+
+    .meta-box {
+      background: #fff;
+      border: 1px solid rgba(11, 15, 20, .1);
+      border-radius: 12px;
+      padding: 14px 16px;
+      transition: all .25s cubic-bezier(.2,.8,.2,1);
+    }
+
+    .meta-box:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(11, 15, 20, .08);
+      border-color: var(--yellow);
+    }
+
+    .meta-box small {
+      display: block;
+      color: #838a92;
+      font: 700 .55rem/1 var(--grotesk);
+      letter-spacing: .14em;
+      margin-bottom: 6px;
+    }
+
+    .meta-box strong {
+      display: block;
+      color: var(--ink);
+      font: 700 .95rem/1.2 var(--grotesk);
+    }
+
+    .cert-view-card {
+      background: #10161c;
+      border-radius: 20px;
+      padding: 20px;
+      box-shadow: var(--shadow);
+      border: 1px solid rgba(255,255,255,.08);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cert-image-frame {
+      background: #ffffff;
+      border-radius: 12px;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 16px;
+      box-shadow: inset 0 0 20px rgba(0,0,0,.04);
+    }
+
+    .cert-image-frame img {
+      width: 100%;
+      max-height: 720px;
+      object-fit: contain;
+      border-radius: 6px;
+      transition: transform .4s cubic-bezier(.2,.8,.2,1);
+    }
+
+    .cert-view-card:hover .cert-image-frame img {
+      transform: scale(1.015);
+    }
+
+    .cert-actions {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-top: 24px;
+    }
+
+    .btn-action-brick {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 14px 22px;
+      border-radius: 12px;
+      border: 2px solid var(--ink);
+      font: 800 .68rem/1 var(--grotesk);
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      transition: all .2s cubic-bezier(.2,.8,.2,1);
+      cursor: pointer;
+    }
+
+    .btn-action-yellow {
+      background: var(--yellow);
+      color: var(--ink);
+      box-shadow: 0 6px 0 var(--ink);
+    }
+
+    .btn-action-yellow:hover {
+      background: #ffe033;
+      transform: translateY(-3px);
+      box-shadow: 0 9px 0 var(--ink);
+    }
+
+    .btn-action-yellow:active {
+      transform: translateY(2px);
+      box-shadow: 0 3px 0 var(--ink);
+    }
+
+    @media(max-width: 600px) {
+      .btn-action-brick {
+        width: 100%;
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+
+<body class="cert-page">
+  <main class="cert-shell">
+    <div class="cert-top">
+      <a class="back-link" href="index.html#certificates"><i class="bi bi-arrow-left"></i> BACK TO CERTIFICATES</a>
+      <div class="cert-code">CREDENTIAL / 02 / ENGLISH PROFICIENCY</div>
+    </div>
+
+    <header class="cert-header">
+      <div class="cert-status-badge">
+        <span class="status-dot-active"></span>
+        STANDARDIZED TEST · ISSUED BY ELSKILL ENGLISH COURSE
+      </div>
+      <h1 class="cert-title">TOEFL <span>570.</span></h1>
+      <p style="color: #606872; max-width: 720px; line-height: 1.8; margin-top: 8px;">
+        Test of English as a Foreign Language (TOEFL) assessing English language proficiency in academic and professional settings across listening comprehension, structure & written expression, and reading comprehension.
+      </p>
+    </header>
+
+    <div class="cert-meta-grid">
+      <div class="meta-box">
+        <small>TOTAL SCORE</small>
+        <strong style="color: var(--blue);">570 / 677</strong>
+      </div>
+      <div class="meta-box">
+        <small>LISTENING COMP.</small>
+        <strong>51</strong>
+      </div>
+      <div class="meta-box">
+        <small>STRUCTURE & WRITING</small>
+        <strong>53</strong>
+      </div>
+      <div class="meta-box">
+        <small>READING COMP.</small>
+        <strong>67</strong>
+      </div>
+      <div class="meta-box">
+        <small>ISSUE DATE</small>
+        <strong>25 Jun 2025</strong>
+      </div>
+      <div class="meta-box">
+        <small>VALIDITY</small>
+        <strong>Until 25 Jun 2027</strong>
+      </div>
+    </div>
+
+    <div class="cert-view-card">
+      <div class="cert-image-frame">
+        <img src="assets/img/certificates/toefl.png" alt="Official TOEFL Certificate of Dzaka Prastiya with a total score of 570">
+      </div>
+    </div>
+
+    <div class="cert-actions">
+      <a href="assets/img/certificates/TOEFL-Dzaka.pdf" target="_blank" class="btn-action-brick btn-action-yellow">
+        OPEN OFFICIAL PDF <i class="bi bi-file-earmark-pdf"></i>
+      </a>
+    </div>
+  </main>
+</body>
+
+</html>
